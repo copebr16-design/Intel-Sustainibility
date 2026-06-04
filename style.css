@@ -1,132 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
 
 /* HERO */
-.hero {
-  background-color: #0068b5;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+.hero { 
+  background-color: #0068b5; 
+  color: white; 
+  text-align: center; 
+  padding: 60px 20px; 
 }
-
-.logo {
-  width: 120px;
-  margin-bottom: 20px;
-  filter: brightness(0) invert(1);
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+.logo { width: 120px; margin-bottom: 20px; filter: brightness(0) invert(1); }
+.hero h1 { font-size: 2.4rem; margin-bottom: 16px; }
+.hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
 
 /* SCROLL HINT */
-.scroll-hint {
-  text-align: center;
-  padding: 16px;
-  font-size: 0.9rem;
-  color: #666;
-  background-color: #e8f0fe;
+.scroll-hint { 
+  text-align: center; 
+  padding: 16px; 
+  font-size: 0.9rem; 
+  color: #666; 
+  background-color: #e8f0fe; 
 }
 
-/* TIMELINE — horizontal scroll on desktop */
-.timeline {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  gap: 24px;
-  padding: 40px;
-  background-color: #e8f0fe;
+/* TIMELINE */
+.timeline { 
+  display: flex; 
+  flex-direction: row; 
+  overflow-x: scroll; 
+  scroll-snap-type: x mandatory; 
+  gap: 24px; 
+  padding: 40px; 
+  background-color: #e8f0fe; 
+}
+.card { 
+  min-width: 260px; 
+  background: white; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  scroll-snap-align: start; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer; 
+}
+.card:hover { transform: scale(1.05); box-shadow: 0 10px 24px rgba(0,104,181,0.4); }
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card-front { padding: 16px; background-color: #0068b5; color: white; }
+.card-front h2 { font-size: 1.8rem; }
+.card-front h3 { font-size: 1rem; font-weight: normal; margin-top: 4px; }
+.card-details { padding: 16px; display: none; font-size: 0.95rem; line-height: 1.6; color: #333; }
+.card:hover .card-details { display: block; }
+
+/* Responsive Timeline */
+@media (max-width: 768px) { 
+  .timeline { flex-direction: column; overflow-x: unset; scroll-snap-type: none; } 
+  .card { min-width: unset; width: 100%; } 
 }
 
-/* CARDS */
-.card {
-  min-width: 260px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
+/* THREE-COLUMN SECTION */
+.features h3 { font-weight: 600; }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 24px rgba(0, 104, 181, 0.4);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.card-front {
-  padding: 16px;
-  background-color: #0068b5;
-  color: white;
-}
-
-.card-front h2 {
-  font-size: 1.8rem;
-}
-
-.card-front h3 {
-  font-size: 1rem;
-  font-weight: normal;
-  margin-top: 4px;
-}
-
-/* DETAILS hidden by default, shown on hover */
-.card-details {
-  padding: 16px;
-  display: none;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.card:hover .card-details {
-  display: block;
-}
-
-/* RESPONSIVE — stacks vertically on mobile */
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    overflow-x: unset;
-    scroll-snap-type: none;
-  }
-
-  .card {
-    min-width: unset;
-    width: 100%;
-  }
-}
+/* NEWSLETTER */
+.newsletter { border-top: 1px solid #eee; }
 
 /* FOOTER */
-footer {
-  background-color: #0068b5;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
+footer { background-color: #0068b5; color: white; padding: 20px 0; }
+
+/* RTL Support */
+html[dir="rtl"] .hero, 
+html[dir="rtl"] .features, 
+html[dir="rtl"] footer { text-align: right; }
+html[dir="rtl"] .row { direction: rtl; }
