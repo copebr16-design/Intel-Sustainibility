@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <!-- TIMELINE - UNTOUCHED (exactly as you had it) -->
+  <!-- TIMELINE (unchanged) -->
   <section class="timeline">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400" alt="Intel founding"/>
@@ -42,7 +42,7 @@
         <h3>First Microprocessor</h3>
       </div>
       <div class="card-details">
-        <p>Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.</p>
+        <p>Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution.</p>
       </div>
     </div>
 
@@ -53,7 +53,7 @@
         <h3>8086 Processor</h3>
       </div>
       <div class="card-details">
-        <p>Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.</p>
+        <p>Launch of the 8086 processor, establishing the x86 architecture.</p>
       </div>
     </div>
 
@@ -64,7 +64,7 @@
         <h3>386 Processor</h3>
       </div>
       <div class="card-details">
-        <p>Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.</p>
+        <p>Intel introduces the 386 processor with 32-bit architecture.</p>
       </div>
     </div>
 
@@ -75,7 +75,7 @@
         <h3>Peak GHG Emissions</h3>
       </div>
       <div class="card-details">
-        <p>This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.</p>
+        <p>This year marks Intel's highest annual greenhouse gas emissions.</p>
       </div>
     </div>
 
@@ -86,7 +86,7 @@
         <h3>RISE Strategy</h3>
       </div>
       <div class="card-details">
-        <p>Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</p>
+        <p>Intel launches its RISE strategy and 2030 goals.</p>
       </div>
     </div>
 
@@ -97,7 +97,7 @@
         <h3>Net-Zero By 2040</h3>
       </div>
       <div class="card-details">
-        <p>Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.</p>
+        <p>Intel commits to net-zero greenhouse gas emissions by 2040.</p>
       </div>
     </div>
 
@@ -108,7 +108,7 @@
         <h3>Renewable Electricity</h3>
       </div>
       <div class="card-details">
-        <p>The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions.</p>
+        <p>The company achieves 99% renewable electricity usage worldwide.</p>
       </div>
     </div>
 
@@ -119,21 +119,20 @@
         <h3>Sustainability Summit</h3>
       </div>
       <div class="card-details">
-        <p>Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</p>
+        <p>Intel hosts its first Sustainability Summit.</p>
       </div>
     </div>
   </section>
 
   <p class="scroll-hint">Scroll to view timeline | Hover over cards to learn more!</p>
 
-  <!-- NEW THREE-COLUMN SECTION -->
+  <!-- THREE-COLUMN SECTION -->
   <section class="features py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold">Our Sustainability Pillars</h2>
         <p class="lead text-muted">Discover how Intel drives positive impact across the globe</p>
       </div>
-      
       <div class="row g-4">
         <div class="col-md-4">
           <div class="text-center p-4 h-100 border rounded-3 shadow-sm">
@@ -163,7 +162,7 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER FORM -->
+  <!-- NEWSLETTER -->
   <section class="newsletter py-5 bg-white">
     <div class="container">
       <div class="row justify-content-center">
@@ -204,7 +203,6 @@
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <script>
-    // Newsletter form
     document.getElementById('newsletter-form').addEventListener('submit', function(e) {
       e.preventDefault();
       if (this.checkValidity()) {
@@ -214,20 +212,6 @@
         this.classList.add('was-validated');
       }
     });
-
-    // Bonus: Simple RTL auto-detect (LevelUp)
-    function updateDirection() {
-      const lang = document.documentElement.lang;
-      if (['ar', 'he', 'fa', 'ur'].includes(lang)) {
-        document.documentElement.dir = 'rtl';
-      } else {
-        document.documentElement.dir = 'ltr';
-      }
-    }
-    window.addEventListener('load', updateDirection);
-    // Re-check if Google Translate changes language
-    const observer = new MutationObserver(updateDirection);
-    observer.observe(document.documentElement, { attributes: true });
   </script>
 </body>
 </html>
